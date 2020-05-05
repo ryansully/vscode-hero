@@ -1,8 +1,11 @@
 {
-	"name": "Embedded Javascript",
-	"scopeName": "text.hero",
+	"name": "Hero",
+	"scopeName": "source.hero",
 	"injectionSelector": "L:text.html",
 	"patterns": [
+		{
+			"include": "#html"
+		},
 		{
 			"include": "#tag-block-comment"
 		},
@@ -20,6 +23,11 @@
 		}
 	],
 	"repository": {
+		"html": {
+			"patterns": [{
+				"include": "text.html.basic"
+			}]
+		},
 		"tag-block-comment": {
 			"begin": "<%#",
 			"beginCaptures": {
@@ -83,7 +91,7 @@
 				}
 			]
 		},
-		
+
 		"tag-hero-single-line": {
 			"name": "meta.tag.metadata.script.hero",
 			"begin":"(<%[+=@!:~]?[biufsv]? )(?!(\\s*\\*\/))(.+)(?=( %>))",

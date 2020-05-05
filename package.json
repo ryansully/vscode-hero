@@ -31,7 +31,7 @@
 		"grammars": [
 			{
 				"language": "hero",
-				"scopeName": "text.hero",
+				"scopeName": "source.hero",
 				"path": "./syntaxes/hero.json",
 				"injectTo": [
 					"text.html"
